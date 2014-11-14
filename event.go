@@ -1,20 +1,10 @@
 package GoNPlay
 
 import (
+	"fmt"
 	glfw "github.com/go-gl/glfw3"
 )
 
-func SetupEventHandler() {
-	logger.Info("Configuring EventHandler")
-}
-
-type KeyboardEventHandler struct {
-	events map[glfw.Key]Event
-}
-
-type EventHandler struct {
-}
-
 type Event interface {
-	execute(entity *Entity) error
+	execute(entity Entity) error
 }
